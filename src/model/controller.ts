@@ -8,8 +8,8 @@ export class Controller {
     constructor() {
     }
     
-    registrarDevolucion(request: X.Request) : Response {
+    registrarDevolucion(request: X.Request, res: X.Response, response: Response, callback: any) : void {
         let req: Request = request.body;
-        return RegistrarDevolucion.registrarDevolucion(req);
+        RegistrarDevolucion.registrarDevolucion(req, request, res, callback);
     }
 }

@@ -4,8 +4,8 @@ import {Pool} from 'pg';
 export class Database {
     private static config = {
         user: 'admin',
-        host: '192.168.50.7',
-        database: 'inventario',
+        host: '35.199.91.206',
+        database: 'arti',
         password: 'admin123',
         port: 5432,
         max: 10,

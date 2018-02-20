@@ -7,7 +7,6 @@ const tsProject = ts.createProject('tsconfig.json');
 
 gulp.task('scripts', () => {
   const tsResult = tsProject.src()
-  .pipe(typescript(tsProject(), { target: 'ES6'}))
   .pipe(tsProject());
   return tsResult.js.pipe(gulp.dest('dist'));
 });

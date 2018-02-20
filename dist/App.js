@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
-const HeroRouter_1 = require("./routes/HeroRouter");
+const CustomRouter_1 = require("./routes/CustomRouter");
 // Creates and configures an ExpressJS web server.
 class App {
     //Run configuration methods on the Express instance.
@@ -12,7 +12,6 @@ class App {
         this.middleware();
         this.routes();
     }
-    // Configure Express middleware.
     middleware() {
         this.express.use(logger('dev'));
         this.express.use(bodyParser.json());
@@ -26,12 +25,10 @@ class App {
         let router = express.Router();
         // placeholder route handler
         router.get('/', (req, res, next) => {
-            res.json({
-                message: 'Hello World!'
-            });
+            res.json({});
         });
         this.express.use('/', router);
-        this.express.use('/api/v1/heroes', HeroRouter_1.default);
+        this.express.use('/arti-4208/inventory/api/v1_0_0/enroll_return', CustomRouter_1.default);
     }
 }
 exports.default = new App().express;

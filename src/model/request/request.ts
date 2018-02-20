@@ -2,12 +2,12 @@ import { Body } from './body';
 import { HeaderData } from './headerData';
 
 export class Request {
-    header: HeaderData;
-    body: Body;
+    HeaderData: HeaderData;
+    Body: Body;
     
     constructor(header: HeaderData,
                 body: Body) {
-        this.header = header;
-        this.body = body;
+        this.HeaderData = header;
+        this.Body = body;
     }
 }

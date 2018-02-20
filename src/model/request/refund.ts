@@ -1,10 +1,10 @@
 export class Refund {
-    refound_date: Date;
+    refundDate: Date;
     units: number;
     
-    constructor(refound_date: Date,
+    constructor(refundDate: Date,
                 units: number) {
-        this.refound_date = refound_date;
+        this.refundDate = refundDate;
         this.units = units;
     }
 }
