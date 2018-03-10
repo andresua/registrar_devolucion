@@ -9,7 +9,7 @@ export class Body {
     
     constructor(refund: Refund,
                 stock: Stock,
-                ...products: Product[]) {
+                products: Product[]) {
         this.refund = refund;
         this.stock = stock;
         this.products = products;
